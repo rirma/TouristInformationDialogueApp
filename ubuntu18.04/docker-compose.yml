@@ -1,0 +1,12 @@
+version: '2.3'
+services:
+  z_server:
+    image: z_server
+    build: ./z
+    hostname: z_server
+    container_name: z_server
+    volumes:
+      - ./z/opt:/root/opt
+    ports:
+      - "127.0.0.1:10033:8000"
+    tty: true
